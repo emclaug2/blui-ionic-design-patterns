@@ -1,6 +1,6 @@
 <div class="mat-elevation-z4 toolbar-container" [style.backgroundColor]="Colors.white[50]">
     <mat-toolbar
-        data-cy="pxb-toolbar"
+        data-cy="blui-toolbar"
         color="primary"
         class="main-header mat-elevation-z2"
         [class.hidden]="toggleSearch"
@@ -10,7 +10,7 @@
                 <mat-icon>menu</mat-icon>
             </button>
             <div class="mat-title" style="padding-left: 24px">Search Bar</div>
-            <pxb-spacer></pxb-spacer>
+            <blui-spacer></blui-spacer>
             <button data-cy="search-btn" mat-icon-button (click)="openSearch()" style="margin-right: -8px">
                 <mat-icon>search</mat-icon>
             </button>
@@ -36,15 +36,15 @@
     </mat-toolbar>
 </div>
 <mat-list>
-    <pxb-info-list-item *ngFor="let item of list | filter: searchText" data-cy="list-view">
-        <mat-icon pxb-icon>person</mat-icon>
-        <span pxb-title>{{ item.president }}</span>
-        <span pxb-subtitle>{{ item.party }}</span>
-        <span pxb-info>{{ item.tookOffice }}</span>
-    </pxb-info-list-item>
-    <pxb-info-list-item *ngIf="(list | filter: searchText).length === 0" data-cy="list-view-no-results">
-        <mat-icon pxb-icon>error</mat-icon>
-        <span pxb-title>0 results</span>
-        <span pxb-subtitle>No matching presidents</span>
-    </pxb-info-list-item>
+    <blui-info-list-item *ngFor="let item of list | filter: searchText" data-cy="list-view">
+        <mat-icon blui-icon>person</mat-icon>
+        <span blui-title>{{ item.president }}</span>
+        <span blui-subtitle>{{ item.party }}</span>
+        <span blui-info>{{ item.tookOffice }}</span>
+    </blui-info-list-item>
+    <blui-info-list-item *ngIf="(list | filter: searchText).length === 0" data-cy="list-view-no-results">
+        <mat-icon blui-icon>error</mat-icon>
+        <span blui-title>0 results</span>
+        <span blui-subtitle>No matching presidents</span>
+    </blui-info-list-item>
 </mat-list>

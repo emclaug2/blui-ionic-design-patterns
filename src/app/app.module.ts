@@ -20,7 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DrawerLayoutModule, DrawerModule, EmptyStateModule } from '@pxblue/angular-components';
+import { DrawerLayoutModule, DrawerModule, EmptyStateModule } from '@brightlayer-ui/angular-components';
 import { PlaceholderComponent } from './pages/placeholder/placeholder.component';
 import { DataListModule } from './pages/list/data-list/data-list.module';
 import { IonicModule } from '@ionic/angular';

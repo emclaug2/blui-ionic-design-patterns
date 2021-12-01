@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import * as PXBColors from '@pxblue/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 import { GradePipe } from './grade.pipe';
 
 describe('GradePipe', () => {
@@ -15,7 +15,7 @@ describe('GradePipe', () => {
     });
 
     it('should return red if the value is less than 80', () => {
-        void expect(pipe.transform(79)).toEqual(PXBColors.red[500]);
-        void expect(pipe.transform(80)).not.toEqual(PXBColors.red[500]);
+        void expect(pipe.transform(79)).toEqual(BLUIColors.red[500]);
+        void expect(pipe.transform(80)).not.toEqual(BLUIColors.red[500]);
     });
 });
