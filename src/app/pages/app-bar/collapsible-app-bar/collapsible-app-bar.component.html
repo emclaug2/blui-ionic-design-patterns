@@ -36,11 +36,11 @@
     </mat-toolbar>
 
     <mat-list class="presidents-list">
-        <pxb-info-list-item *ngFor="let item of list">
-            <mat-icon pxb-icon>person</mat-icon>
-            <span pxb-title>{{ item.president }}</span>
-            <span pxb-subtitle>{{ item.party }}</span>
-            <span pxb-info>{{ item.tookOffice }}</span>
-        </pxb-info-list-item>
+        <blui-info-list-item *ngFor="let item of list">
+            <mat-icon blui-icon>person</mat-icon>
+            <span blui-title>{{ item.president }}</span>
+            <span blui-subtitle>{{ item.party }}</span>
+            <span blui-info>{{ item.tookOffice }}</span>
+        </blui-info-list-item>
     </mat-list>
 </div>

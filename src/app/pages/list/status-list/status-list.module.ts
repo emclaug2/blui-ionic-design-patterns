@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { StatusListComponent } from './status-list.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { InfoListItemModule, ListItemTagModule } from '@pxblue/angular-components';
+import { InfoListItemModule, ListItemTagModule } from '@brightlayer-ui/angular-components';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({

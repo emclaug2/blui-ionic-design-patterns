@@ -3,11 +3,11 @@
         <mat-icon>menu</mat-icon>
     </button>
     <div>Data List</div>
-    <pxb-spacer></pxb-spacer>
+    <blui-spacer></blui-spacer>
 </mat-toolbar>
 <mat-list>
-    <pxb-info-list-item *ngFor="let item of list" [hidePadding]="true">
-        <span pxb-title>{{ item.name }}</span>
-        <span pxb-right-content>{{ item.year }}</span>
-    </pxb-info-list-item>
+    <blui-info-list-item *ngFor="let item of list" [hidePadding]="true">
+        <span blui-title>{{ item.name }}</span>
+        <span blui-right-content>{{ item.year }}</span>
+    </blui-info-list-item>
 </mat-list>

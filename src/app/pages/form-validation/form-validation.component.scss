@@ -1,4 +1,4 @@
-@import '~@pxblue/colors/palette.scss';
+@import '~@brightlayer-ui/colors/palette.scss';
 
 section {
     padding: 16px 24px;
@@ -36,15 +36,15 @@ mat-form-field {
 }
 
 .success {
-    color: map-get($pxb-blue, 500);
+    color: map-get($blui-blue, 500);
 }
 
 .failure {
-    color: map-get($pxb-gray, 100);
+    color: map-get($blui-gray, 100);
 }
 
 .failure-red {
-    color: map-get($pxb-red, 500);
+    color: map-get($blui-red, 500);
 }
 
 .form-description {

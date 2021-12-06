@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 @Component({
     selector: 'app-password-strength',
