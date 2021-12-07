@@ -1,3 +1,8 @@
+/**
+ Copyright (c) 2021-present, Eaton
+ All rights reserved.
+ This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
+ **/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DrawerLayoutModule, DrawerModule, EmptyStateModule } from '@pxblue/angular-components';
+import { DrawerLayoutModule, DrawerModule, EmptyStateModule } from '@brightlayer-ui/angular-components';
 import { PlaceholderComponent } from './pages/placeholder/placeholder.component';
 import { DataListModule } from './pages/list/data-list/data-list.module';
 import { IonicModule } from '@ionic/angular';
@@ -31,6 +36,7 @@ import { BasicBottomSheetModule } from './pages/overlays/basic-bottom-sheet/basi
 import { ComplexBottomSheetModule } from './pages/overlays/complex-bottom-sheet/complex-bottom-sheet.module';
 import { LoadingStatesModule } from './pages/loading-states/loading-states.module';
 import { CollapsibleAppBarModule } from './pages/app-bar/collapsible-app-bar/collapsible-app-bar.module';
+import { FormValidationModule } from './pages/form-validation/form-validation.module';
 
 @NgModule({
     declarations: [AppComponent, PlaceholderComponent],
@@ -66,6 +72,7 @@ import { CollapsibleAppBarModule } from './pages/app-bar/collapsible-app-bar/col
         ComplexBottomSheetModule,
         LoadingStatesModule,
         CollapsibleAppBarModule,
+        FormValidationModule,
     ],
     providers: [StatusBar, SplashScreen],
     bootstrap: [AppComponent],

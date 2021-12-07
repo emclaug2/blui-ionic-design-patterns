@@ -1,11 +1,11 @@
-@import '~@pxblue/colors/palette.scss';
+@import '~@brightlayer-ui/colors/palette.scss';
 
 mat-list {
-    color: map-get($pxb-gray, 800);
+    color: map-get($blui-gray, 800);
 }
 
 .loading-states-container {
-    background-color: map-get($pxb-gray, 50);
+    background-color: map-get($blui-gray, 50);
     min-height: calc(100vh - 64px);
 }
 
@@ -29,6 +29,6 @@ mat-grid-tile {
     overflow: visible;
 }
 
-::ng-deep pxb-hero-banner .pxb-hero-banner {
+::ng-deep blui-hero-banner .blui-hero-banner {
     justify-content: space-around;
 }

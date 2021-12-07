@@ -14,23 +14,27 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "color",
-              "@pxblue/colors"
-            ],
-            "outputPath": "dist/ionic-design-patterns",
+            "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
+              }
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/@pxblue/angular-themes/open-sans.scss",
-              "./node_modules/@pxblue/angular-themes/theme.scss",
+              "./node_modules/@brightlayer-ui/angular-themes/theme.scss",
+              "./node_modules/@brightlayer-ui/angular-themes/open-sans.scss",
               "./node_modules/placeholder-loading/src/scss/placeholder-loading.scss"
             ],
             "scripts": []
@@ -46,7 +50,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -92,16 +95,40 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/@pxblue/angular-themes/open-sans.scss",
-              "./node_modules/@pxblue/angular-themes/theme.scss"
+              "./node_modules/@brightlayer-ui/angular-themes/theme.scss",
+              "./node_modules/@brightlayer-ui/angular-themes/open-sans.scss",
+              "./node_modules/placeholder-loading/src/scss/placeholder-loading.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "src/",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              }
+            ]
+          },
+          "configurations": {
+            "ci": {
+              "progress": false,
+              "watch": false
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         },
         "e2e": {
@@ -147,7 +174,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "defaultCollection": "@ionic/angular-toolkit",
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
