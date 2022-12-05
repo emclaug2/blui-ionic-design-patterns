@@ -41,3 +41,5 @@ Then you may run `yarn && yarn start` to start a local server.
 ## Folder Structure
 
 All our design patterns are located inside `/src/app/pages`.
+
+Sample Commit
